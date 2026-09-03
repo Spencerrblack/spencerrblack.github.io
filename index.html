@@ -1,40 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Spencer Black — Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spencer Black — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EFF1EC;
+    --ink: #1C2321;
+    --slate: #5B6660;
+    --brass: #9C6B30;
+    --line: #C9CDC3;
+    --max: 720px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  a { color: var(--ink); }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.site {
+    padding-top: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .kicker {
+    font-size: 13px;
+    color: var(--brass);
+    margin-bottom: 18px;
+  }
+
+  h1.name {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+    line-height: 1.05;
+    margin: 0 0 10px 0;
+  }
+
+  .title {
+    font-size: 19px;
+    color: var(--slate);
+    margin: 0;
+  }
+
+  nav.site {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  nav.site a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--slate);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+  }
+
+  nav.site a:hover { color: var(--ink); border-color: var(--brass); }
+
+  section {
+    padding: 52px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 26px;
+  }
+
+  .section-head .rule {
+    width: 28px;
+    height: 1px;
+    background: var(--brass);
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .about p {
+    max-width: 62ch;
+  }
+
+  .skills-ledger {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+  }
+
+  .skills-ledger div {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+  }
+
+  .project-row {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 4px 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .project-row:last-child { border-bottom: none; }
+
+  .project-index {
+    font-family: 'Fraunces', serif;
+    color: var(--brass);
+    font-size: 15px;
+    padding-top: 2px;
+  }
+
+  .project-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 4px 0;
+  }
+
+  .project-desc {
+    color: var(--slate);
+    font-size: 14.5px;
+    margin: 0;
+    max-width: 55ch;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-list a {
+    text-decoration: none;
+    font-size: 15.5px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+  }
+
+  .contact-list a:hover { border-color: var(--brass); }
+
+  footer.site {
+    padding: 32px 0 56px 0;
+    color: var(--slate);
+    font-size: 13px;
+  }
+
+  @media (max-width: 520px) {
+    .skills-ledger { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
 
-  <h1>Spencer Black</h1>
-  <p>Business Student — University of Utah</p>
+<div class="wrap">
 
-  <h2>About Me</h2>
-  <p>I'm a finance and business major with a broad interest in how businesses are valued, bought, and grown. My career interests center on entrepreneurship and small business acquisition, and I'm drawn to how AI can support smarter, faster decision-making in finance and operations. On the technical side, I enjoy working with data, tools like Excel and SQL, and exploring AI applications for business analysis. Outside of coursework, I like learning how different industries actually operate day to day.</p>  <h2>Skills</h2>
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Python</li>
-    <li>SQL</li>
-    <li>Git and GitHub</li>
-    <li>Microsoft Excel</li>
-    <li>Financial Modeling and SDE Normalization</li>
-    <li>CRM and Deal Pipeline Management</li>
-    <li>Data Analytics</li>
-    <li>AI Prompt Engineering</li>
-  </ul>
+  <header class="site">
+    <div class="kicker">Portfolio — updated throughout the semester</div>
+    <h1 class="name">Spencer Black</h1>
+    <p class="title">Business Student · Entrepreneurship Through Acquisition</p>
 
-  <h2>Projects</h2>
-  <p><strong>Acquisition Analysis — Small Business LOI:</strong> Financial due diligence and deal structuring on a seller-financed acquisition target, from first look through letter of intent.</p>
-  <p><strong>CRM Migration and Pipeline Rebuild:</strong> Migrated a business brokerage's lead-tracking system to a new CRM to fix lapsed-lead visibility and improve pipeline reporting.</p>
-  <p><strong>Business Valuation and Comp Research:</strong> SDE normalization and market comparables research to support pricing on small business sale listings.</p>
-  <p><strong>AI-Assisted Deal Workflow:</strong> Exploring AI tools to speed up outbound prospecting, lead re-engagement, and deal documentation.</p>
+    <nav class="site">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <h2>Resume</h2>
-  <p>Resume coming soon.</p>
+  <section id="about">
+    <div class="section-head">
+      <div class="rule"></div>
+      <h2>About</h2>
+    </div>
+    <div class="about">
+      <p>I'm a finance and business major with a broad interest in how businesses are valued, bought, and grown. My career interests center on entrepreneurship and small business acquisition, and I'm drawn to how AI can support smarter, faster decision-making in finance and operations. On the technical side, I enjoy working with data, tools like Excel and SQL, and exploring AI applications for business analysis. Outside of coursework, I like learning how different industries actually operate day to day.</p>
+    </div>
+  </section>
 
-  <h2>Contact</h2>
-  <p>U1509321@umail.utah.edu</p>
-  <p><a href="https://github.com/Spencerrblack">github.com/Spencerrblack</a></p>
+  <section id="skills">
+    <div class="section-head">
+      <div class="rule"></div>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-ledger">
+      <div>HTML &amp; CSS</div>
+      <div>Python</div>
+      <div>SQL</div>
+      <div>Git &amp; GitHub</div>
+      <div>Microsoft Excel</div>
+      <div>Financial Modeling &amp; SDE Normalization</div>
+      <div>CRM &amp; Deal Pipeline Management</div>
+      <div>Data Analytics</div>
+      <div>AI Prompt Engineering</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-head">
+      <div class="rule"></div>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="project-row">
+      <div class="project-index">01</div>
+      <div>
+        <p class="project-title">Acquisition Analysis — Small Business LOI</p>
+        <p class="project-desc">Financial due diligence and deal structuring on a seller-financed acquisition target, from first look through letter of intent.</p>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project-index">02</div>
+      <div>
+        <p class="project-title">CRM Migration &amp; Pipeline Rebuild</p>
+        <p class="project-desc">Migrated a business brokerage's lead-tracking system to a new CRM to fix lapsed-lead visibility and improve pipeline reporting.</p>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project-index">03</div>
+      <div>
+        <p class="project-title">Business Valuation &amp; Comp Research</p>
+        <p class="project-desc">SDE normalization and market comparables research to support pricing on small business sale listings.</p>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project-index">04</div>
+      <div>
+        <p class="project-title">AI-Assisted Deal Workflow</p>
+        <p class="project-desc">Exploring AI tools to speed up outbound prospecting, lead re-engagement, and deal documentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="section-head">
+      <div class="rule"></div>
+      <h2>Resume</h2>
+    </div>
+    <p>Resume coming soon.</p>
+  </section>
+
+  <section id="contact">
+    <div class="section-head">
+      <div class="rule"></div>
+      <h2>Contact</h2>
+    </div>
+    <ul class="contact-list">
+      <li><a href="mailto:U1509321@umail.utah.edu">U1509321@umail.utah.edu.edu</a></li>
+      <li><a href="https://github.com/Spencerrblack" target="_blank" rel="noopener">github.com/Spencerrblack</a></li>
+    </ul>
+  </section>
+
+  <footer class="site">
+    &copy; 2026 Spencer Black. Built for IS 3060.
+  </footer>
+
+</div>
 
 </body>
+</html>
